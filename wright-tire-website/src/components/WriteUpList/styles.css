@@ -6,13 +6,6 @@ ol {
     padding: 0;
 }
 
-li {
-    border: 1px solid gray;
-    width: auto;
-    padding: 5px;
-    display: flex;
-    justify-content: space-between;
-}
 
 .write-up-search-bar {
     margin: 10 0 10 0;
