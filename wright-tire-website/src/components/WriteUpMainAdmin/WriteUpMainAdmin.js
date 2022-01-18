@@ -14,6 +14,7 @@ export function WriteUpMainAdmin () {
         model: '',
         mileage: 0,
         license: '',
+        color: ''
     });
 
     const handleInfoChange = (e) => {
