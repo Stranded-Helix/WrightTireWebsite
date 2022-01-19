@@ -6,26 +6,28 @@ export function WriteUpList() {
 
     const activeTickets = [
         {
-            name: "Garrett Fite",
-            vehicle: "2018 Ford Focus",
+            id: "001",
+            name: "April Fite",
+            vehicle: "2010 Ford Focus",
             color: "blue",
             status: "waiting"
         },
         {
-            name: "NTTH",
+            id: "002",
+            name: "Tim Miller",
             vehicle: "2015 Chevy Express 3500",
             color: "white",
             status: "ETA",
         },
         {
+            id: "003",
             name: ""
         }
     ]
 
-    const activeList = activeTickets.forEach(x => {
-        <WriteUpListItem name={x.name} vehicle={x.vehicle} color={x.color} status={x.status}></WriteUpListItem>
-        console.log(x);
-    })
+    const activeList = activeTickets.map(x => 
+        <WriteUpListItem key={x.id} name={x.name} vehicle={x.vehicle} color={x.color} status={x.status}></WriteUpListItem>
+    )
 
     console.log(activeList);
     return (
@@ -40,7 +42,6 @@ export function WriteUpList() {
                     
                     <div className="">Not Confirmed</div>
                 </li>
-                {/* <WriteUpListItem name = 'Garrett Fite' vehicle= '2018 Ford Focus' color='blue' status='waiting'></WriteUpListItem> */}
                 {activeList}
 
             </ol>
