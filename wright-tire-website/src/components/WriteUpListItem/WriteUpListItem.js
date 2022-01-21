@@ -6,7 +6,7 @@ export function WriteUpListItem(props) {
         <button>
             <div className="write-up-list-info-box">
                 <div>{props.name}</div>
-                <div>{props.vehicle}<div className={`car-color-icon ${props.color}`}></div></div>
+                <div>{`${props.year} ${props.make} ${props.model}`}<div className={`car-color-icon ${props.color}`}></div></div>
             </div>
 
             <div className="test-waiter">{props.status}</div>

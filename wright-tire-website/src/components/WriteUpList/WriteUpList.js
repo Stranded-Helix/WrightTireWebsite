@@ -1,35 +1,18 @@
 import React from 'react'
 import './styles.css';
 import { WriteUpListItem } from '../../components/WriteUpListItem/WriteUpListItem';
+import { useWriteUpGlobalContext } from '../WriteUpGlobalContext/WriteUpGlobalContext';
 
 export function WriteUpList() {
+    
+    const activeWorkOrders = useWriteUpGlobalContext();
+    console.log('WriteUpListLOG:')
+    console.log(activeWorkOrders);
 
-    const activeTickets = [
-        {
-            id: "001",
-            name: "April Fite",
-            vehicle: "2010 Ford Focus",
-            color: "blue",
-            status: "waiting"
-        },
-        {
-            id: "002",
-            name: "Tim Miller",
-            vehicle: "2015 Chevy Express 3500",
-            color: "white",
-            status: "ETA",
-        },
-        {
-            id: "003",
-            name: ""
-        }
-    ]
-
-    const activeList = activeTickets.map(x => 
-        <WriteUpListItem key={x.id} name={x.name} vehicle={x.vehicle} color={x.color} status={x.status}></WriteUpListItem>
+    const activeList = activeWorkOrders.map(x => 
+        <WriteUpListItem key={x.id} name={x.admin.name} year={x.admin.year} make={x.admin.make} model={x.admin.model} color={x.admin.color} status={x.admin.status}></WriteUpListItem>
     )
 
-    console.log(activeList);
     return (
         <div className="write-up-search-bar">
             Search ________________

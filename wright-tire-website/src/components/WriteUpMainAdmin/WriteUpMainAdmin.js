@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles.css';
+import { useWriteUpGlobalContext, useWriteUpGlobalContextUpdater } from '../../components/WriteUpGlobalContext/WriteUpGlobalContext';
 
 export function WriteUpMainAdmin () {
+    const Contextcustomer = useWriteUpGlobalContext();
 
     const [customer, setCustomer] = useState({
         id: '',
@@ -14,8 +16,14 @@ export function WriteUpMainAdmin () {
         model: '',
         mileage: 0,
         license: '',
-        color: ''
+        color: '',
+        status: '',
     });
+
+    // useEffect(() => {
+    //     setCustomer(prevCustomer => ({...prevCustomer, Contextcustomer[0].admin}));
+    // }, []);
+    
 
     const handleInfoChange = (e) => {
         setCustomer(prevCustomer => ({...prevCustomer, [e.target.name]: e.target.value}))

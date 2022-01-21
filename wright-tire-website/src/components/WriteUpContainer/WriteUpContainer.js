@@ -14,38 +14,6 @@ export function WriteUpContainer(props) {
                     Header
                 </WriteUpAdminButtons>
                 <WriteUpMain></WriteUpMain>
-                <div className="write-up-sheet write-up-main-grid-position test-border">
-                    Write up Sheet
-                    Customer Name
-                    Vehicle Info
-                    <div className="test-line-work">
-                        <div className="test-line-work-title">
-                            Flat Repair
-                        </div>
-                        <div className="test-line-work-info">
-                            Passenger Rear
-                        </div>
-                        <div className="test-line-work-notes">
-                            Found nail, repaired
-                        </div>
-                    </div>
-                    <div className="test-line-work">
-                        <div className="test-line-work-title">
-                            LOF
-                        </div>
-                        <div className="test-line-work-info">
-                            6QT, Check Air Filter
-                        </div>
-                    </div>
-                    <div className="test-line-work">
-                        <div className="test-line-work-title">
-                            Tire Light
-                        </div>
-                        <div className="test-line-work-info">
-                            Diag.
-                        </div>
-                    </div>
-                </div>
             </div>
 
 
