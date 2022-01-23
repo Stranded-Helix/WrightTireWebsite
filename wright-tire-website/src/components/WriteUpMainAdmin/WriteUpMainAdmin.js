@@ -1,33 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import './styles.css';
-import { useWriteUpGlobalContext, useWriteUpGlobalContextUpdater } from '../../components/WriteUpGlobalContext/WriteUpGlobalContext';
+import { useWriteUpActiveContext, useWriteUpActiveContextUpdater } from '../WriteUpActiveContext/WriteUpActiveContext';
 
 export function WriteUpMainAdmin () {
-    const Contextcustomer = useWriteUpGlobalContext();
-
-    const [customer, setCustomer] = useState({
-        id: '',
-        invoice: '',
-        key: '',
-        name: '',
-        phone: '',
-        year: 0,
-        make: '',
-        model: '',
-        mileage: 0,
-        license: '',
-        color: '',
-        status: '',
-    });
+    const activeCustomer = useWriteUpActiveContext();
+    const updateCustomer = useWriteUpActiveContextUpdater();
 
     // useEffect(() => {
     //     setCustomer(prevCustomer => ({...prevCustomer, Contextcustomer[0].admin}));
     // }, []);
     
+    console.log("MainAdmin");
+    console.log(activeCustomer);
 
     const handleInfoChange = (e) => {
-        setCustomer(prevCustomer => ({...prevCustomer, [e.target.name]: e.target.value}))
-        console.log(customer);
+        updateCustomer(customerPrev => ({...customerPrev, admin: {
+            ...customerPrev.admin,
+            [e.target.name]: e.target.value
+        }}))
+        console.log(activeCustomer);
     }
 
     return (
@@ -37,7 +28,7 @@ export function WriteUpMainAdmin () {
                         Invoice
                     </label>
                     <input type='text' className='write-up-main-invoice-input'
-                    name='invoice' value={customer.invoice} onChange={handleInfoChange}>
+                    name='invoice' value={activeCustomer.admin.invoice} onChange={handleInfoChange}>
 
                     </input>
                 </div>
@@ -46,7 +37,7 @@ export function WriteUpMainAdmin () {
                         Key
                     </label>
                     <input type='text' className='write-up-main-key-input'
-                    name='key' value={customer.key} onChange={handleInfoChange}>
+                    name='key' value={activeCustomer.admin.key} onChange={handleInfoChange}>
 
                     </input>
                 </div>
@@ -55,7 +46,7 @@ export function WriteUpMainAdmin () {
                         name
                     </label>
                     <input type='text' className='write-up-main-name-input'
-                    name='name' value={customer.name} onChange={handleInfoChange}>
+                    name='name' value={activeCustomer.admin.name} onChange={handleInfoChange}>
                         
                     </input>
                 </div>
@@ -64,7 +55,7 @@ export function WriteUpMainAdmin () {
                         phone
                     </label>
                     <input type='text' className='write-up-main-phone-input'
-                    name='phone' value={customer.phone} onChange={handleInfoChange}>
+                    name='phone' value={activeCustomer.admin.phone} onChange={handleInfoChange}>
                         
                     </input>
                 </div>
@@ -73,7 +64,7 @@ export function WriteUpMainAdmin () {
                         year
                     </label>
                     <input type='text' className='write-up-main-year-input'
-                    name='year' value={customer.year} onChange={handleInfoChange}>
+                    name='year' value={activeCustomer.admin.year} onChange={handleInfoChange}>
                         
                     </input>
                 </div>
@@ -82,7 +73,7 @@ export function WriteUpMainAdmin () {
                         Make
                     </label>
                     <input type='text' className='write-up-main-make-input'
-                    name='make' value={customer.make} onChange={handleInfoChange}>
+                    name='make' value={activeCustomer.admin.make} onChange={handleInfoChange}>
                         
                     </input>
                 </div>
@@ -91,7 +82,7 @@ export function WriteUpMainAdmin () {
                         model
                     </label>
                     <input type='text' classmodel='write-up-main-model-input'
-                    name='model' value={customer.model} onChange={handleInfoChange}>
+                    name='model' value={activeCustomer.admin.model} onChange={handleInfoChange}>
                         
                     </input>
                 </div>
@@ -100,7 +91,7 @@ export function WriteUpMainAdmin () {
                         mileage
                     </label>
                     <input type='text' classmileage='write-up-main-mileage-input'
-                    name='mileage' value={customer.mileage} onChange={handleInfoChange}>
+                    name='mileage' value={activeCustomer.admin.mileage} onChange={handleInfoChange}>
                         
                     </input>
                 </div>
@@ -109,7 +100,7 @@ export function WriteUpMainAdmin () {
                         license
                     </label>
                     <input type='text' classlicense='write-up-main-license-input'
-                    name='license' value={customer.license} onChange={handleInfoChange}>
+                    name='license' value={activeCustomer.admin.license} onChange={handleInfoChange}>
                         
                     </input>
                 </div>

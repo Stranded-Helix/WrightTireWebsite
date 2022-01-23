@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 
-const WriteUpGlobalContext = React.createContext();
-const WriteUpGlobalContextUpdater = React.createContext();
+const WriteUpListContext = React.createContext();
+const WriteUpListContextUpdater = React.createContext();
 
-const testActiveWriteUps = [
+const writeUpLists = [
     {
         id: '001',
         admin: {
@@ -93,25 +93,25 @@ const testActiveWriteUps = [
     },
 ]
 
-export function useWriteUpGlobalContext() {
-    return useContext(WriteUpGlobalContext);
+export function useWriteUpListContext() {
+    return useContext(WriteUpListContext);
 }
 
-export function useWriteUpGlobalContextUpdater() {
-    return useContext(WriteUpGlobalContextUpdater);
+export function useWriteUpListContextUpdater() {
+    return useContext(WriteUpListContextUpdater);
 }
 
-export function WriteUpGlobalProvider({children}) {
+export function WriteUpListProvider({children}) {
 
-    const [activeWriteUps, setActiveWriteUps] = useState(
-        testActiveWriteUps
+    const [writeUpList, setWriteUpList] = useState(
+        writeUpLists
     )
 
     return (
-        <WriteUpGlobalContext.Provider value={activeWriteUps}>
-            <WriteUpGlobalContextUpdater.Provider value=''>
+        <WriteUpListContext.Provider value={writeUpList}>
+            <WriteUpListContextUpdater.Provider value=''>
                 {children}
-            </WriteUpGlobalContextUpdater.Provider>
-        </WriteUpGlobalContext.Provider>
+            </WriteUpListContextUpdater.Provider>
+        </WriteUpListContext.Provider>
     )
 }

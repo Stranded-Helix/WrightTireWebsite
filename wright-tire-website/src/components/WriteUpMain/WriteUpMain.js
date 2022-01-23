@@ -2,11 +2,11 @@ import React from 'react';
 import './styles.css';
 import { WriteUpMainAdmin } from '../../components/WriteUpMainAdmin/WriteUpMainAdmin';
 import { WriteUpMainWorkItem } from '../../components/WriteUpMainWorkItem/WriteUpMainWorkItem';
-import { useWriteUpGlobalContext, useWriteUpGlobalContextUpdater } from '../WriteUpGlobalContext/WriteUpGlobalContext';
+import { useWriteUpListContext, useWriteUpListContextUpdater } from '../WriteUpListContext/WriteUpListContext';
 
 export function WriteUpMain () {
     //TODO: rework to hold a single writeup object
-    const activeWriteUp = useWriteUpGlobalContext();
+    const activeWriteUp = useWriteUpListContext();
     console.log('writeUpMain');
     console.log(activeWriteUp);
 

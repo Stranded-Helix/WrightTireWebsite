@@ -1,11 +1,11 @@
 import React from 'react'
 import './styles.css';
 import { WriteUpListItem } from '../../components/WriteUpListItem/WriteUpListItem';
-import { useWriteUpGlobalContext } from '../WriteUpGlobalContext/WriteUpGlobalContext';
+import { useWriteUpListContext } from '../WriteUpListContext/WriteUpListContext';
 
 export function WriteUpList() {
     
-    const activeWorkOrders = useWriteUpGlobalContext();
+    const activeWorkOrders = useWriteUpListContext();
     console.log('WriteUpListLOG:')
     console.log(activeWorkOrders);
 

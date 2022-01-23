@@ -1,15 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
 import { WriteUpContainer } from './components/WriteUpContainer/WriteUpContainer';
-import { WriteUpGlobalProvider } from './components/WriteUpGlobalContext/WriteUpGlobalContext';
+import { WriteUpListProvider } from './components/WriteUpListContext/WriteUpListContext';
+import { WriteUpActiveProvider } from './components/WriteUpActiveContext/WriteUpActiveContext';
 
 function App() {
   return (
-    <WriteUpGlobalProvider>
-      <WriteUpContainer>
+    <WriteUpListProvider>
+      <WriteUpActiveProvider>
+        <WriteUpContainer>
 
-      </WriteUpContainer>
-    </WriteUpGlobalProvider>
+        </WriteUpContainer>
+      </WriteUpActiveProvider>
+    </WriteUpListProvider>
 
   );
 }
