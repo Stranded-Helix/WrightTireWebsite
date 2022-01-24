@@ -4,9 +4,19 @@ import { useWriteUpActiveContextUpdater } from '../WriteUpActiveContext/WriteUpA
 
 export function WriteUpListItem(props) {
 
-    const changeWriteUp = useWriteUpActiveContextUpdater()
+    const updateActiveContext = useWriteUpActiveContextUpdater()
+
+    console.log(updateActiveContext);
+
+    const changeWriteUp = (e) => {
+        console.log("changeWriteUp");
+        console.log(e);
+        console.log("parsedInt");
+        console.log(parseInt(e.target.id));
+        updateActiveContext('change',parseInt(e.target.id));
+    }
     return (
-        <button>
+        <button id={props.id} onClick={changeWriteUp}>
             <div className="write-up-list-info-box">
                 <div>{props.name}</div>
                 <div>{`${props.year} ${props.make} ${props.model}`}<div className={`car-color-icon ${props.color}`}></div></div>

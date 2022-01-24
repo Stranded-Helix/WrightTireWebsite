@@ -51,11 +51,15 @@ const writeUpLists = [
         jobs: [
             {
             line: 1,
-            title: '',
+            title: 'Flat Repair',
             entries: [
                 {
-                    question: '',
-                    response: '',
+                    question: 'Location',
+                    response: 'Driver Rear',
+                },
+                {
+                    question: 'Location',
+                    response: 'Driver Front',
                 }
             ]
         }

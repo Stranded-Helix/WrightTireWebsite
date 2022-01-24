@@ -14,10 +14,11 @@ export function WriteUpMainAdmin () {
     console.log(activeCustomer);
 
     const handleInfoChange = (e) => {
-        updateCustomer(customerPrev => ({...customerPrev, admin: {
+        const updatedCustomer = (customerPrev => ({...customerPrev, admin: {
             ...customerPrev.admin,
             [e.target.name]: e.target.value
         }}))
+        updateCustomer('update', updatedCustomer);
         console.log(activeCustomer);
     }
 

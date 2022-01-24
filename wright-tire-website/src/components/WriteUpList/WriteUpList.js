@@ -9,8 +9,13 @@ export function WriteUpList() {
     console.log('WriteUpListLOG:')
     console.log(activeWorkOrders);
 
+    const testLog = (e) => {
+        console.log(e);
+    }
+
     const activeList = activeWorkOrders.map(x => 
-        <WriteUpListItem key={x.id} name={x.admin.name} year={x.admin.year} make={x.admin.make} model={x.admin.model} color={x.admin.color} status={x.admin.status}></WriteUpListItem>
+        <WriteUpListItem key={x.id} id={x.id} name={x.admin.name} year={x.admin.year} make={x.admin.make}
+        model={x.admin.model} color={x.admin.color} status={x.admin.status}></WriteUpListItem>
     )
 
     return (
