@@ -107,13 +107,21 @@ export function useWriteUpListContextUpdater() {
 
 export function WriteUpListProvider({children}) {
 
+    const addWriteUp = () => console.log("hello");
+    const addJob = () => console.log("Add Job");
+
     const [writeUpList, setWriteUpList] = useState(
         writeUpLists
     )
 
+    const WriteUpListContextFunctions = {
+        addWriteUp: addWriteUp,
+        addJob: addJob,
+    }
+
     return (
         <WriteUpListContext.Provider value={writeUpList}>
-            <WriteUpListContextUpdater.Provider value=''>
+            <WriteUpListContextUpdater.Provider value={WriteUpListContextFunctions}>
                 {children}
             </WriteUpListContextUpdater.Provider>
         </WriteUpListContext.Provider>
