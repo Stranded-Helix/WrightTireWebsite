@@ -3,6 +3,12 @@
     border: 2px dashed black;
 }
 
+.write-up-main-work-item-title {
+    font-size: 16px;
+    margin: 1em;
+    padding: 0
+}
+
 .write-up-main-work-item-textarea {
     box-sizing: border-box;
     resize: none;
@@ -11,3 +17,4 @@
     background-color: lightgray;
     border: none;
 }
+

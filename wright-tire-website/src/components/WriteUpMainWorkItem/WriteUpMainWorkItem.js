@@ -7,7 +7,7 @@ export function WriteUpMainWorkItem(props) {
     const activeWorkEntries = props.entries.map((x, index) =>
         <div key={index} className='write-up-main-work-item-entry-form'>
             <label>{x.question}</label>
-            <textarea className='write-up-main-work-item-textarea' value={x.response}></textarea>
+            <textarea className='write-up-main-work-item-textarea' defaultValue={x.response}></textarea>
         </div>
     )
 

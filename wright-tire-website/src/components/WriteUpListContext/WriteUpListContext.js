@@ -21,15 +21,15 @@ const writeUpLists = [
         },
         jobs: [
             {
-            line: 1,
-            title: '',
-            entries: [
-                {
-                    question: '',
-                    response: '',
-                }
-            ]
-        }
+                line: 1,
+                title: '',
+                entries: [
+                    {
+                        question: '',
+                        response: '',
+                    }
+                ]
+            }
         ]
 
     },
@@ -50,19 +50,33 @@ const writeUpLists = [
         },
         jobs: [
             {
-            line: 1,
-            title: 'Flat Repair',
-            entries: [
-                {
-                    question: 'Location',
-                    response: 'Driver Rear',
-                },
-                {
-                    question: 'Location',
-                    response: 'Driver Front',
-                }
-            ]
-        }
+                line: 1,
+                title: 'Flat Repair',
+                entries: [
+                    {
+                        question: 'Location',
+                        response: 'Driver Rear',
+                    },
+                    {
+                        question: 'Location',
+                        response: 'Driver Front',
+                    }
+                ]
+            },
+            {
+                line: 2,
+                title: 'LOF',
+                entries: [
+                    {
+                        question: 'Quantity',
+                        response: '7Qt',
+                    },
+                    {
+                        question: 'Filter',
+                        response: '107MP',
+                    }
+                ]
+            }
         ]
 
     },
@@ -83,15 +97,15 @@ const writeUpLists = [
         },
         jobs: [
             {
-            line: 1,
-            title: '',
-            entries: [
-                {
-                    question: '',
-                    response: '',
-                }
-            ]
-        }
+                line: 1,
+                title: '',
+                entries: [
+                    {
+                        question: '',
+                        response: '',
+                    }
+                ]
+            }
         ]
 
     },
@@ -105,7 +119,7 @@ export function useWriteUpListContextUpdater() {
     return useContext(WriteUpListContextUpdater);
 }
 
-export function WriteUpListProvider({children}) {
+export function WriteUpListProvider({ children }) {
 
     const addWriteUp = () => console.log("hello");
     const addJob = () => console.log("Add Job");

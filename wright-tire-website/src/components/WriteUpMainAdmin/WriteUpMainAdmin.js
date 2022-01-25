@@ -5,10 +5,6 @@ import { useWriteUpActiveContext, useWriteUpActiveContextUpdater } from '../Writ
 export function WriteUpMainAdmin () {
     const activeCustomer = useWriteUpActiveContext();
     const updateCustomer = useWriteUpActiveContextUpdater();
-
-    // useEffect(() => {
-    //     setCustomer(prevCustomer => ({...prevCustomer, Contextcustomer[0].admin}));
-    // }, []);
     
     console.log("MainAdmin");
     console.log(activeCustomer);
@@ -18,7 +14,7 @@ export function WriteUpMainAdmin () {
             ...customerPrev.admin,
             [e.target.name]: e.target.value
         }}))
-        updateCustomer('update', updatedCustomer);
+        updateCustomer.updateActiveWriteUp(updatedCustomer);
         console.log(activeCustomer);
     }
 
