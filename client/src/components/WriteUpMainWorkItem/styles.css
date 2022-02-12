@@ -1,0 +1,20 @@
+.write-up-main-work-item {
+    background-color: #F2F6FA;
+    border: 2px dashed black;
+}
+
+.write-up-main-work-item-title {
+    font-size: 16px;
+    margin: 1em;
+    padding: 0
+}
+
+.write-up-main-work-item-textarea {
+    box-sizing: border-box;
+    resize: none;
+    width: 100%;
+
+    background-color: lightgray;
+    border: none;
+}
+

@@ -1,0 +1,12 @@
+.write-up-main-admin {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.communications-buttons {
+    display: flex;
+}
+
+.day-buttons {
+    display: flex;
+}

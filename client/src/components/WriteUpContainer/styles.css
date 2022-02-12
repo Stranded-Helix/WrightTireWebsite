@@ -1,0 +1,45 @@
+.write-up-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-column-gap: 0px;
+    background-color: #9BB1CC;
+    /* background-color: lightgray; */
+    /*https://coolors.co/2c3642-9bb1cc-6c91bf-f2f6fa-919191 */
+    height: 100vh;
+    width: 100vw;
+    }
+    
+    .col-1 {
+        grid-column-start: 1;
+    }
+    
+    .col-2 {
+        grid-column-start: 2;
+    }
+
+    .col-3 {
+        grid-column-start: 3;
+    }
+
+    .write-up-list-grid-position {
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .write-up-main-grid-position {
+        grid-row-start: 2;
+    }
+
+    .test-border {
+        border: 1px solid black;
+    }
+
+    .test-line-work {
+        border: 2px dashed black;
+        padding: 5px;
+    }
+
+    .test-line-work-title {
+        font-weight: bold;
+        font-size: 20px;
+    }

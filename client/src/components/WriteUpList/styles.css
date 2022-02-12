@@ -1,0 +1,77 @@
+
+
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.write-up-search-bar {
+    margin: 10 0 10 0;
+}
+
+.write-up-list-info-box {
+
+}
+
+.car-color-icon {
+    display: inline-block;
+    height: 15px;
+    width:15px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.test-waiter {
+    display: inline-block;
+    background-color: Orange;
+}
+
+.test-eta {
+    display: inline-block;
+    background-color: green;
+}
+
+.test-drop-off {
+    display: inline-block;
+    background-color: purple;
+    color: white;
+}
+
+.test-not-confirmed {
+
+}
+
+.test-liscene-plate{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    font-weight: bold;
+    color: blue;
+    white-space: nowrap;
+    height: 40px;
+    y: -20;
+}
+
+.test-old {
+    background-color: darkred;
+    color: white
+}
+
+.red {
+    background-color:red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: black;
+}
