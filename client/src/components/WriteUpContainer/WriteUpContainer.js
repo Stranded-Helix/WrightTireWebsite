@@ -1,9 +1,9 @@
 import React from 'react';
 import './styles.css';
-import { WriteUpList } from '../../components/WriteUpList/WriteUpList';
-import { WriteUpAdminButtons } from '../../components/WriteUpAdminButtons/WriteUpAdminButtoms';
-import { WriteUpWorkButtons } from '../../components/WriteUpWorkButtons/WriteUpWorkButtons';
-import { WriteUpMain } from '../../components/WriteUpMain/WriteUpMain';
+import { WriteUpList } from '../WriteUpList/WriteUpList';
+import { WriteUpAdminButtons } from '../WriteUpAdminButtons/WriteUpAdminButtoms';
+import { WriteUpWorkButtons } from '../WriteUpWorkButtons/WriteUpWorkButtons';
+import { WriteUpMain } from '../WriteUpMain/WriteUpMain';
 
 export function WriteUpContainer(props) {
     return (

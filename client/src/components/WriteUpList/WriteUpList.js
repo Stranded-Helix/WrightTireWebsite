@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles.css';
-import { WriteUpListItem } from '../../components/WriteUpListItem/WriteUpListItem';
+import { WriteUpListItem } from '../WriteUpListItem/WriteUpListItem';
 import { useWriteUpListContext } from '../WriteUpListContext/WriteUpListContext';
 import { WriteUpAddItem } from '../WriteUpAddItem/WriteUpAddItem';
 

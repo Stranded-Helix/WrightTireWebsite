@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
-import { WriteUpMainAdmin } from '../../components/WriteUpMainAdmin/WriteUpMainAdmin';
-import { WriteUpMainWorkItem } from '../../components/WriteUpMainWorkItem/WriteUpMainWorkItem';
+import { WriteUpMainAdmin } from '../WriteUpMainAdmin/WriteUpMainAdmin';
+import { WriteUpMainWorkItem } from '../WriteUpMainWorkItem/WriteUpMainWorkItem';
 import { useWriteUpActiveContext, useWriteUpActiveContextUpdater } from '../WriteUpActiveContext/WriteUpActiveContext';
 
 export function WriteUpMain () {
